@@ -181,6 +181,8 @@ const packages = [
 
 const seedDatabase = async () => {
   try {
+      console.log(process.env.MONGODB_URI,"process.env.MONGODB_URI    ")
+
     await mongoose.connect(process.env.MONGODB_URI || 'mongodb+srv://goswami7497:Test@123@cluster-goswami.ium7rkf.mongodb.net/?appName=Cluster-goswami')
     console.log('Connected to MongoDB')
 
